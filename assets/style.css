@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+  letter-spacing: 1px;
+}
+nav .left-part {
+  width: 50%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+nav .right-part {
+  width: 50%;
+  text-align: center;
+}
+nav .right-part ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+nav .right-part li {
+  padding: 0 30px;
+}
+nav .right-part a {
+  text-decoration: none;
+  color: gray;
+}
+nav .right-part a:hover {
+  color: #64a19d;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+/*---------------------------------------------------------------------*/
+#hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.342), rgb(0, 0, 0)),
+    url(./image/bg-masthead.jpg);
+  height: 90vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#hero h1 {
+  font-family: "Varela Round", sans-serif;
+  font-size: 104px;
+  letter-spacing: 15px;
+  background: linear-gradient(rgb(236, 234, 234), rgba(255, 255, 255, 0.123));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+#hero p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#hero a {
+  text-decoration: none;
+  padding: 20px 32px;
+  color: white;
+  background-color: #64a19d;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/*--------------------------------------------------------------------------*/
+#about {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    #000 0%,
+    rgba(0, 0, 0, 0.9) 75%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  padding-top: 100px;
+}
+#about .about-body {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+img {
+  max-width: 80%;
+}
+#about .text {
+  width: 50%;
+  margin: 40px 0;
+}
+#about h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+#about p {
+  color: white;
+  margin: 30px 0;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 2;
+}
+#about a{
+    color: #64a19d;
+}
+/*-----------------------------------------------------------------------------------*/
+#projects{
+
+}
+.projects-body{
+    width: 80%;
+    margin: 0 auto;
+}
