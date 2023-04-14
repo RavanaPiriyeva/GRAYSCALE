@@ -7,6 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
       rel="stylesheet"
     />
@@ -18,15 +25,16 @@
     <!--Header start-->
     <header>
       <nav>
-        <div class="left-part">
-          <p>Start Bootstrap</p>
+        <div class="nav-left-part">
+          <p><a href="#hero">Start Bootstrap</a></p>
         </div>
-        <div class="right-part">
+        <div class="nav-right-part">
           <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Project</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
+          <div class="nav-menu"><i class="fa-solid fa-bars"></i></div>
         </div>
       </nav>
     </header>
@@ -50,7 +58,7 @@
       <!--About start-->
       <section id="about">
         <div class="about-body">
-          <div class="text">
+          <div class="about-body-text">
             <h2>Built with Bootstrap 5</h2>
             <p>
               Grayscale is a free Bootstrap theme created by Start Bootstrap. It
@@ -59,7 +67,7 @@
               you can use it for any purpose, personal or commercial.
             </p>
           </div>
-          <div class="img">
+          <div class="about-img">
             <img src="./assets/image/ipad.png" alt="ipad" />
           </div>
         </div>
@@ -69,7 +77,7 @@
       <!--Projects start-->
       <section id="projects">
         <div class="projects-body">
-          <div class="top-part">
+          <div class="projects-top-part">
             <div class="img">
               <img src="./assets/image/bg-masthead.jpg" alt="mountain" />
             </div>
@@ -82,8 +90,8 @@
               </p>
             </div>
           </div>
-          <div class="bottom-part">
-            <div class="bottom-part-item">
+          <div class="projects-bottom-part">
+            <div class="projects-bottom-part-item">
               <div class="img">
                 <img src="./assets/image/mountain2.jpg" alt="mountain-two" />
               </div>
@@ -96,7 +104,7 @@
               </div>
             </div>
 
-            <div class="bottom-part-item">
+            <div class="projects-bottom-part-item">
               <div class="img">
                 <img src="./assets/image/bg-masthead.jpg" alt="mountain-two" />
               </div>
@@ -266,7 +274,7 @@
           <div class="link-item">
             <a href="#">
               <svg
-              width="20"
+                width="20"
                 class="svg-inline--fa fa-github"
                 aria-hidden="true"
                 focusable="false"
@@ -286,10 +294,24 @@
           </div>
         </div>
         <div class="link-body-bottom">
-<p>Copyright © Your Website 2023</p>
+          <p>Copyright © Your Website 2023</p>
         </div>
       </section>
     </footer>
     <!--Footer end-->
+
+    <script>
+      let nav = document.querySelector("nav");
+      let a = document.querySelector("nav a");
+      window.addEventListener("scroll", function () {
+        if (this.scrollY <= 0) {
+          nav.style.backgroundColor = "transparent";
+          a.style.color = "#c6c6c6";
+        } else {
+          nav.style.backgroundColor = "white";
+          a.style.color = "black";
+        }
+      });
+    </script>
   </body>
 </html>

@@ -5,36 +5,48 @@
   font-family: "Varela Round", sans-serif;
   letter-spacing: 1px;
 }
+html {
+  scroll-behavior: smooth;
+}
 
-nav .left-part {
+
+/*---------------Nav Bar---------*/
+nav .nav-left-part {
   width: 50%;
   text-align: center;
   font-weight: 600;
   font-size: 20px;
 }
+nav .nav-left-part a {
+  text-decoration: none;
+  color: rgb(198, 198, 198);
+}
 
-nav .right-part {
+nav .nav-right-part {
   width: 50%;
   text-align: center;
 }
 
-nav .right-part ul {
+nav .nav-right-part ul {
   display: flex;
   list-style: none;
   justify-content: center;
 }
 
-nav .right-part li {
+nav .nav-right-part li {
   padding: 0 30px;
 }
 
-nav .right-part a {
+nav .nav-right-part a {
   text-decoration: none;
-  color: gray;
+  color: rgb(198, 198, 198);
 }
 
-nav .right-part a:hover {
-  color: #64a19d;
+nav .nav-right-part a:hover {
+  color: rgb(98, 160, 156);
+}
+nav .nav-right-part .nav-menu {
+  display: none;
 }
 
 nav {
@@ -44,10 +56,12 @@ nav {
   padding: 20px;
   position: fixed;
   width: 100%;
-  background-color: white;
+  background-color: transparent;
+  transition: all 0.5s;
+  z-index: 1;
 }
 
-/*---------------------------------------------------------------------*/
+/*HERO---------------------------------------------------------------------*/
 #hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.342), rgb(0, 0, 0)),
     url(./image/bg-masthead.jpg);
@@ -77,20 +91,20 @@ nav {
 #hero a {
   text-decoration: none;
   padding: 20px 32px;
-  color: white;
-  background-color: #64a19d;
+  color: rgb(255, 255, 255);
+  background-color: rgb(98, 160, 156);
   border-radius: 5px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-/*--------------------------------------------------------------------------*/
+/*ABOUT--------------------------------------------------------------------------*/
 #about {
   display: flex;
   justify-content: center;
   background: linear-gradient(
     to bottom,
-    #000 0%,
+    rgb(0,0,0) 0%,
     rgba(0, 0, 0, 0.9) 75%,
     rgba(0, 0, 0, 0.8) 100%
   );
@@ -109,54 +123,54 @@ img {
   max-width: 80%;
 }
 
-#about .text {
+#about .about-body-text {
   width: 50%;
   margin: 40px 0;
 }
 
 #about h2 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 32px;
   font-weight: 500;
   letter-spacing: 0;
 }
 
 #about p {
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 30px 0;
   color: rgba(255, 255, 255, 0.5);
   line-height: 2;
 }
 
 #about a {
-  color: #64a19d;
+  color: rgb(98, 160, 156);
 }
 
-/*-----------------------------------------------------------------------------------*/
+/*Projects-----------------------------------------------------------------------------------*/
 
 #projects .projects-body {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   padding: 50px 0;
 }
 
-#projects .top-part {
+#projects .projects-top-part {
   display: flex;
   padding: 50px 0;
 }
 
-#projects .top-part h3 {
+#projects .projects-top-part h3 {
   font-weight: 400;
   margin-bottom: 30px;
   font-size: 25px;
   color: rgb(68, 67, 67);
 }
 
-#projects .top-part p {
+#projects .projects-top-part p {
   color: rgba(0, 0, 0, 0.5);
 }
 
-#projects .top-part .top-part-text {
+#projects .projects-top-part .top-part-text {
   width: 40%;
   text-align: center;
   display: flex;
@@ -165,59 +179,61 @@ img {
   padding: 0 50px;
 }
 
-#projects .top-part .img {
+#projects .projects-top-part .img {
   width: 60%;
   position: relative;
 }
 
-#projects .top-part .img::before {
+#projects .projects-top-part .img::before {
   content: "";
   position: absolute;
   width: 8px;
-  height: 150px;
-  background-color: #64a19d;
-  top: 180px;
+  height: 40%;
+  background-color: rgb(98, 160, 156);
+  top: 50%;
   right: -8px;
+  transform: translateY(-50%);
 }
 
-#projects .top-part .img img {
+#projects .projects-top-part .img img {
   max-width: 100%;
 }
 
-#projects .bottom-part {
+#projects .projects-bottom-part {
   padding: 40px 0;
 }
 
-#projects .bottom-part-item {
+#projects .projects-bottom-part-item {
   display: flex;
+  flex-wrap: wrap;
 }
-#projects .bottom-part-item:nth-child(even) {
+#projects .projects-bottom-part-item:nth-child(even) {
   flex-direction: row-reverse;
 }
-#projects .bottom-part-item .img {
+#projects .projects-bottom-part-item .img {
   width: 50%;
 }
 
-#projects .bottom-part-item .img img {
+#projects .projects-bottom-part-item .img img {
   min-width: 100%;
   height: 100%;
 }
 
-#projects .bottom-part-item .bottom-part-text {
+#projects .projects-bottom-part-item .bottom-part-text {
   width: 50%;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   padding: 0 60px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
 }
-#projects .bottom-part-item .bottom-part-text p {
+#projects .projects-bottom-part-item .bottom-part-text p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 15px;
 }
-#projects .bottom-part-item .bottom-part-text h3 {
-  color: white;
+#projects .projects-bottom-part-item .bottom-part-text h3 {
+  color: rgb(255, 255, 255);
   font-weight: 400;
   font-size: 22px;
   margin-bottom: 20px;
@@ -230,7 +246,7 @@ img {
       to bottom,
       rgba(0, 0, 0, 0.1) 0%,
       rgba(0, 0, 0, 0.5) 70%,
-      #000 100%
+      rgb(0,0,0) 100%
     ),
     url(./image/footer.jpg);
   padding: 50px 0;
@@ -243,10 +259,10 @@ img {
 }
 #contact .contact-body svg {
   max-width: 40px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 #contact .contact-body h3 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 300;
   font-size: 32px;
   padding-top: 20px;
@@ -265,8 +281,8 @@ img {
 #contact .contact-body input[type="submit"] {
   width: 150px;
   height: 50px;
-  background-color: #64a19d81;
-  color: white;
+  background-color: rgba(100, 161, 157, 0.506);
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -274,87 +290,144 @@ img {
 
 /*----------------------------------------------------------------------*/
 #card {
- background-color: #000;
- padding: 100px 20px;
+  background-color: rgb(0, 0, 0);
+  padding: 100px 20px;
 }
-#card .card-body{
+#card .card-body {
   width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-#card .card-item{
-  background-color: white;
+#card .card-item {
+  background-color: rgb(255, 255, 255);
   width: 30%;
   text-align: center;
   padding: 30px;
- border-radius: 5px;
- border-bottom: 5px solid #64a19d ;
+  border-radius: 5px;
+  border-bottom: 5px solid rgb(100, 161, 157);
 }
-#card .card-item svg{
- color: #64a19d;
- padding: 10px 0;
+#card .card-item svg {
+  color: rgb(100, 161, 157);
+  padding: 10px 0;
 }
-#card .card-item h4{
-font-weight: lighter;
-font-size: 14px ;
-padding-bottom: 50px;
-position: relative;
+#card .card-item h4 {
+  font-weight: lighter;
+  font-size: 14px;
+  padding-bottom: 50px;
+  position: relative;
 }
-#card .card-item h4::after{
+#card .card-item h4::after {
   content: "";
   width: 50px;
   height: 3px;
   position: absolute;
   bottom: 20px;
   left: 50%;
-  transform: translate(-50%,-50%);
-  background-color: #64a19d;
-  }
-#card .card-item p{
-  color: grey;
+  transform: translate(-50%, -50%);
+  background-color: rgb(100, 161, 157);
+}
+#card .card-item p {
+  color: rgb(128, 128, 128);
   font-size: 14px;
-  padding:10px;
+  padding: 10px;
   letter-spacing: 2px;
 }
 
 /**---------------------------------------------*/
 #link {
-  background-color: #000;
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 20px 0;
 }
-#link .link-body-top{
-width: 80%;
-margin: 0 auto;
-display: flex;
-justify-content: center;
-
-
+#link .link-body-top {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
-#link .link-item{
+#link .link-item {
   margin: 10px;
 }
-#link .link-item a{
+#link .link-item a {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 10px;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  color: grey;
+  color: rgb(128, 128, 128);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#link .link-item a:hover{
+#link .link-item a:hover {
   color: rgb(201, 201, 201);
 }
 
-
-#link .link-body-bottom{
+#link .link-body-bottom {
   padding: 50px 0;
   width: 80%;
   text-align: center;
   margin: 0 auto;
-  color: gray;
+  color: rgb(128, 128, 128);
+}
+
+@media screen and (max-width: 800px) {
+  #about .about-body-text {
+    width: 80%;
+  }
+  #hero h1 {
+    font-size: 80px;
+  }
+  #projects .projects-top-part {
+    flex-wrap: wrap;
+  }
+
+  #projects .projects-top-part .top-part-text {
+    width: 100%;
+    text-align: start;
+    padding: 20px 0 0;
+  }
+
+  #projects .projects-top-part .img {
+    width: 100%;
+  }
+
+  #projects .projects-bottom-part-item .bottom-part-text {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  #hero h1 {
+    font-size: 30px;
+  }
+  nav .nav-right-part .nav-menu {
+    text-align: end;
+    padding-right: 30px;
+    display: block;
+    font-size: 22px;
+  }
+
+  nav .nav-right-part ul {
+    display: none;
+  }
+  #projects .projects-bottom-part-item .img {
+    width: 100%;
+  }
+  #projects .projects-bottom-part-item .bottom-part-text {
+    width: 100%;
+  }
+  #projects .projects-bottom-part-item {
+    margin-bottom: 30px;
+  }
+  #card .card-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #contact .contact-body input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
